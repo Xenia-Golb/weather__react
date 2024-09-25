@@ -49,7 +49,7 @@ function App() {
   return (
     < >
       {
-        !isLoading ? (
+        isLoading ? (
           <Loader />
         ) : (
           <div className='component'>
