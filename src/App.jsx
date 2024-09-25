@@ -4,7 +4,7 @@ import Loader from './components/Loader/Loader';
 
 function App() {
 
-  const API_KEY = '';
+  const API_KEY = '5e389d25b4b042aaa9a200450242409';
   const BASE_URL = 'http://api.weatherapi.com/v1';
 
   const city = 'Москва';
