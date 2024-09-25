@@ -17,18 +17,21 @@ function App() {
     try {
       const response = await fetch(`${BASE_URL}/current.json?key=${API_KEY}&q=${town}&lang=ru`).then((response) => response.json());
       setWeatherData(response);
+      setIsLoading(true);
     } catch (error) {
       console.error('Error:', error);
-      setIsLoading(false);
+      setIsLoading(false)
+
     }
   }
   const fetchWeatherDataDays = async () => {
     try {
       const response = await fetch(`${BASE_URL}/forecast.json?key=${API_KEY}&q=${town}&days=6 &lang=ru`).then((response) => response.json());
       setWeatherData(response);
+      setIsLoading(true);
     } catch (error) {
       console.error('Error:', error);
-      setIsLoading(false);
+      setIsLoading(false)
 
     }
   }
