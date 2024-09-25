@@ -1,0 +1,13 @@
+.title {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 140px;
+}
+
+.call {
+    margin-top: 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
@@ -15,6 +16,7 @@
 header {
   background-color: rgba(123, 175, 217, 0.8);
   color: #fff;
+  max-width: 100vw;
   padding: 20px;
   text-align: center;
   display: flex;
@@ -23,8 +25,8 @@ header {
   align-items: flex-start;
 }
 
-main {
-  width: 100vw;
+.main {
+  max-width: 100vw;
   height: 100vh;
   background-color: #74aad1;
   display: flex;
@@ -36,16 +38,12 @@ main {
   align-items: center;
   flex-wrap: wrap;
   align-content: center;
+  overflow: hidden;
 }
 
 .img__main {
   width: 20%;
 }
-
-
-
-
-
 
 .weather_card {
   background-color: rgba(123, 175, 217, 0.8);
@@ -133,38 +131,84 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 400px);
+    padding-right: calc(50% - 400px);
 
-  /* input,
+  }
+
   button {
-    left: 20px;
-  } */
+    left: 0px;
+    position: relative;
+  }
 
-  main {
+  .container {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .center {
+    padding-left: calc(50% - 188px);
+    padding-right: calc(50% - 188px);
+
+  }
+
+
+  body {
+    max-width: 100vw;
+    font-size: 10px;
+  }
+
+  header {
+    max-width: 100vw;
+    flex-direction: column;
+    gap: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px;
+  }
+
+  header img {
+    display: none;
+  }
+
+  button {
+    left: 0;
+    position: relative;
+  }
+
+  .main {
+    width: 100vw;
+    display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
+    padding: 20px;
+
   }
 
-  .weather_card {
-    width: 100%;
-    height: 300px;
-  }
 
   .small {
-    width: 100%;
-    height: 200px;
+    min-height: 20vh;
+    width: 40vw;
+    margin: 0;
   }
 
   .big {
-    width: 100%;
-    height: 100vh;
+    width: 40vw;
+    max-height: 40vh;
+    margin: 0;
+    margin-left: 10;
+    margin-bottom: 20px;
   }
 
   .container {
     grid-template-columns: repeat(1, 100px);
+    gap: 0px;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
   }
 
 }
