@@ -11,7 +11,7 @@ function App() {
   const defaultValue = {};
   const [weatherData, setWeatherData] = useState(defaultValue);
   const [town, newTown] = useState(city);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchWeatherData = async () => {
     try {
